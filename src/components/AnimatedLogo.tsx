@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const FULL_TEXT = "ShopKietZ";
+const FULL_TEXT = "ZonoShop";
 
 const AnimatedLogo = () => {
   const [displayed, setDisplayed] = useState("");
