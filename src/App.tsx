@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import Index from "./pages/Index";
+import TopUpMenu from "./pages/TopUpMenu";
+import TopUpCard from "./pages/TopUpCard";
+import TopUpBank from "./pages/TopUpBank";
 import TopUp from "./pages/TopUp";
 import History from "./pages/History";
 import TopUpHistory from "./pages/TopUpHistory";
@@ -43,7 +46,9 @@ const App = () => (
           <PageLoader />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/nap-tien" element={<TopUp />} />
+            <Route path="/nap-tien" element={<TopUpBank />} />
+            <Route path="/nap-tien-menu" element={<TopUpMenu />} />
+            <Route path="/nap-the" element={<TopUpCard />} />
             <Route path="/lich-su" element={<History />} />
             <Route path="/lich-su-nap" element={<TopUpHistory />} />
             <Route path="/lich-su-mua" element={<PurchaseHistory />} />
@@ -60,8 +65,6 @@ const App = () => (
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/doi-mat-khau" element={<ChangePassword />} />
             <Route path="/lich-su-cay-thue" element={<BoostHistory />} />
-            <Route path="/nap-the" element={<TopUp />} />
-            <Route path="/nap-ngan-hang" element={<TopUp />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

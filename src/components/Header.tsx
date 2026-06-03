@@ -191,17 +191,13 @@ const Header = () => {
                 <div className="px-3 py-2 border-b border-border flex items-center gap-2 text-primary font-bold text-xs">
                   <Landmark className="w-4 h-4" /> Chọn phương thức nạp
                 </div>
-                <button onClick={() => { navigate("/nap-tien?method=bank"); setTopupOpen(false); }}
+                <button onClick={() => { navigate("/nap-the"); setTopupOpen(false); }}
                   className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-foreground hover:bg-muted transition-colors">
-                  <Landmark className="w-4 h-4 text-primary" /> Ngân hàng
+                  <Smartphone className="w-4 h-4 text-accent" /> Thẻ Cào
                 </button>
-                <button onClick={() => { navigate("/nap-tien?method=card"); setTopupOpen(false); }}
+                <button onClick={() => { navigate("/nap-tien"); setTopupOpen(false); }}
                   className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-foreground hover:bg-muted transition-colors">
-                  <Smartphone className="w-4 h-4 text-accent" /> Thẻ cào
-                </button>
-                <button onClick={() => { navigate("/nap-tien?method=ewallet"); setTopupOpen(false); }}
-                  className="flex items-center gap-2 w-full px-4 py-2.5 text-sm text-foreground hover:bg-muted transition-colors">
-                  <Wallet className="w-4 h-4 text-primary" /> Ví điện tử
+                  <Landmark className="w-4 h-4 text-primary" /> ATM / Ví Điện Tử
                 </button>
               </div>
             )}
